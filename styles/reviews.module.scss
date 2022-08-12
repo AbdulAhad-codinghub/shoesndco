@@ -1,0 +1,142 @@
+.app__testimonial {
+   
+     // flex: 1;
+     width: 100%;
+     
+     align-items:center;
+     justify-content: center;
+     margin-bottom: 5rem;
+    
+    .head_text{
+        align-items: center;
+        justify-content: center;
+        margin-left: 15rem;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: aqua;
+    }
+  }
+  
+  .app__testimonial_item {
+    width: 60%;
+    min-height: 320px;
+    background-color:white;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    margin-top: -2rem;
+    transition: all 0.3s ease-in-out;
+    margin: auto;
+    margin-left: 18.5rem;
+    
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  
+    @media screen and (min-width: 2000px) {
+      min-height: 450px;
+      
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  
+    @media screen and (max-width: 850px) {
+      width: 70%;
+      margin: auto
+    }
+  
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+  
+  .app__testimonial_content {
+    flex: 1;
+    height: 100%;
+    padding: 0 2rem;
+    text-align: left;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  
+    p {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      color: black;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+      @media screen and (min-width: 2000px) {
+        font-size: 2rem;
+        line-height: 3.5rem;
+      }
+    }
+  
+    h4 {
+      font-weight: 600;
+      color: gray;
+      margin-top: 2rem;
+    }
+  
+    h5 {
+      font-weight: 400;
+      color: var(--gray-color);
+      margin-top: 5px;
+    }
+  
+    @media screen and (max-width: 600px) {
+      margin-top: 2rem;
+      padding: 0;
+    }
+  }
+  
+  .app__testimonial_btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    .app__flex {
+        
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color:white;
+      margin: 1rem;
+      transition: all 0.3s ease-in-out;
+  
+      svg {
+        width: 50px;
+        height: 50px;
+        color: grey;
+        margin-bottom: 0.44rem;
+      }
+  
+      &:hover {
+        background-color: gray;
+  
+        svg {
+          color:rgb(11, 11, 11);
+        }
+      }
+  
+      @media screen and (max-width: 1000px) {
+        width: 20px;
+        height: 20px;
+  
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+  
+ 

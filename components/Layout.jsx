@@ -5,19 +5,25 @@ import Footer from './Footer';
 
 const Layout = ({children}) => {
   return (
-    <div className='layout'>
+    <div >
       <Head>
         <title>SHOES & CO</title>
       </Head>
       <header>
         <Navbar/>
       </header>
+      <br/>
+      <br/>
+      <div className='layout'>
       <main className='main-container'>
         {children}
       </main>
+      <br/>
+      <br/>
       <footer>
         <Footer/>
       </footer>
+    </div>
     </div>
   )
 }

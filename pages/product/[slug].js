@@ -6,7 +6,11 @@ import { useStateContext } from '../../context/StateContext';
 const ProductDetails = ({product,products}) => {
     const {image,name,details,price}=product;
     const [index,setIndex]=useState(0);
-    const {decQty,incQty,qty,onAdd}=useStateContext();
+    const {decQty,incQty,qty,onAdd,setShowCart}=useStateContext();
+    const handleBuyNow=()=>{
+        onAdd(product,qty);
+        setShowCart(true);
+    }
   return (
     <div>
         <div className='product-detail-container'>
@@ -15,6 +19,7 @@ const ProductDetails = ({product,products}) => {
                     <img
                     src={urlFor(image && image[index])}
                     className="product-detail-image"
+                    alt="product-image-detail"
                     />
                 </div>
                 <div className='small-images-container'>
@@ -24,6 +29,8 @@ const ProductDetails = ({product,products}) => {
                             src={urlFor(item)}
                             className={i===index ? 'small-image selected-image':'small-image'}
                             onMouseEnter={()=> setIndex(i)}
+                            alt="small-image-item"
+                
                             />
                         ))
                     }
@@ -46,7 +53,7 @@ const ProductDetails = ({product,products}) => {
                 </div>
                 <h4>Details: </h4>
                 <p>{details}</p>
-                <p className='price'>${price}</p>
+                <p className='price'>Rs {price}</p>
                 <div className='quantity'>
                     <h3>Quantity:</h3>
                     <p className='quantity-desc'>
@@ -58,7 +65,7 @@ const ProductDetails = ({product,products}) => {
 
                         <span 
                         className='num' 
-                        onClick="">
+                        >
                             {qty}
                         </span>
 
@@ -80,7 +87,7 @@ const ProductDetails = ({product,products}) => {
                     <button 
                     className='buy-now' 
                     type='button' 
-                    onClick=''
+                    onClick={handleBuyNow}
                     >Buy Now
                     </button>
                 </div>
@@ -137,4 +144,5 @@ export const getStaticPaths = async () => {
       props: { products, product }
     }
   }
-export default ProductDetails
+  
+  export default ProductDetails
