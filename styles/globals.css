@@ -105,10 +105,10 @@ width: 100%;
   width: 100%;
 }
 .product-card{
- cursor: pointer;
+  cursor: pointer;
   transform: scale(1, 1);
   transition: transform 0.5s ease;
- color: #324d67;
+  color: #324d67;
 
 }
 .product-card:hover{
@@ -993,8 +993,9 @@ margin-top: 160px;
   .footer .row ul li{
   display:inline-block;
   margin:0px 30px;
+ 
   }
-  
+
   .footer .row a i{
   font-size:2em;
   margin:0% 1%;
