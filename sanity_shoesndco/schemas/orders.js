@@ -5,13 +5,8 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'firstname',
-            title: 'FirstName',
-            type: 'string',
-        },
-        {
-            name: 'lastname',
-            title: 'LastName',
+            name: 'name',
+            title: 'Name',
             type: 'string',
         },
         {
@@ -20,13 +15,13 @@ export default {
             type: 'string',
         },
         {
-            name: 'zipcode',
-            title: 'Zipcode',
+            name: 'phoneno',
+            title: 'PhoneNo',
             type: 'string',
         },
         {
-            name: 'phoneno',
-            title: 'PhoneNo',
+            name: 'phoneno2',
+            title: 'Alternate PhoneNo',
             type: 'string',
         },
         {
