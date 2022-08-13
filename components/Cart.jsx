@@ -11,18 +11,18 @@ import Success from '../pages/sucess';
 
 const Cart = () => {
   const cartRef = useRef();
-  
-  const { totalPrice, totalQuantities, cartItems, setShowForm,showForm, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
 
-  
+  const { totalPrice, totalQuantities, cartItems, setShowForm, showForm, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+
+
   return (
-    
+
     <div className="cart-wrapper" ref={cartRef}>
       <div className="cart-container">
         <button
-        type="button"
-        className="cart-heading"
-        onClick={() => setShowCart(false)}>
+          type="button"
+          className="cart-heading"
+          onClick={() => setShowCart(false)}>
           <AiOutlineLeft />
           <span className="heading">Your Cart</span>
           <span className="cart-num-items">({totalQuantities} items)</span>
@@ -37,7 +37,7 @@ const Cart = () => {
                 type="button"
                 onClick={() => setShowCart(false)}
                 className="btn"
-                style={{backgroundColor:"red" , color:'white'}}
+                style={{ backgroundColor: "red", color: 'white' }}
               >
                 Continue Shopping
               </button>
@@ -52,17 +52,17 @@ const Cart = () => {
               <div className="item-desc">
                 <div className="flex top">
                   <h5>{item.name}</h5>
-                  <h4>Rs {item.price}</h4> 
+                  <h4>Rs {item.price}</h4>
                 </div>
                 <div className="flex bottom">
                   <div>
-                  <p className="quantity-desc">
-                    <span className="minus" onClick={() => toggleCartItemQuanitity(item._id, 'dec') }>
-                    <AiOutlineMinus />
-                    </span>
-                    <span className="num" onClick="">{item.quantity}</span>
-                    <span className="plus" onClick={() => toggleCartItemQuanitity(item._id, 'inc') }><AiOutlinePlus /></span>
-                  </p>
+                    <p className="quantity-desc">
+                      <span className="minus" onClick={() => toggleCartItemQuanitity(item._id, 'dec')}>
+                        <AiOutlineMinus />
+                      </span>
+                      <span className="num" onClick="">{item.quantity}</span>
+                      <span className="plus" onClick={() => toggleCartItemQuanitity(item._id, 'inc')}><AiOutlinePlus /></span>
+                    </p>
                   </div>
                   <button
                     type="button"
@@ -83,17 +83,17 @@ const Cart = () => {
               <h3>Rs {totalPrice}</h3>
             </div>
             <div className="btn-container">
-            <Link href={"/form"}>
-              <button type="button" className="btn"  style={{backgroundColor:"red" , color:'white'}} onClick={()=> setShowCart(false)}>
-                Confirm Order
-              </button>
-            </Link>
+              <Link href={"/form"}>
+                <button type="button" className="btn" style={{ backgroundColor: "red", color: 'white' }} onClick={() => setShowCart(false)}>
+                  Confirm Order
+                </button>
+              </Link>
             </div>
           </div>
         )}
       </div>
     </div>
-    
+
   )
 }
 
