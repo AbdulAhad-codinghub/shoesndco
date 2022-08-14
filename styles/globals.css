@@ -641,6 +641,7 @@ margin-top: 160px;
 }
 
 @media screen and (max-width:800px) {
+ 
   .hero-banner-container{
     height: 560px;
   }
@@ -1124,4 +1125,28 @@ margin-top: 160px;
   justify-content: center;
 
   
+}
+
+
+.btnn{
+  margin-left: 91%;
+  width: 100%;
+  max-width: fit-content;
+  padding: 5px 12px;
+  border-radius: 15px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color:burlywood;
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+  margin-top: -1.7rem;
+  position:absolute;
+ 
+}
+@media screen and (max-width:800px) {
+    .btnn{
+      margin-left: 70%;
+    }
 }

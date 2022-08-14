@@ -10,8 +10,18 @@ export default {
             type: 'string',
         },
         {
+            name: 'email',
+            title: 'Email',
+            type: 'string',
+        },
+        {
             name: 'city',
             title: 'City',
+            type: 'string',
+        },
+        {
+            name: 'zipcode',
+            title: 'Zipcode',
             type: 'string',
         },
         {
@@ -24,14 +34,15 @@ export default {
             title: 'Alternate PhoneNo',
             type: 'string',
         },
-        {
-            name: 'email',
-            title: 'Email',
-            type: 'string',
-        },
+       
         {
             name: 'address',
             title: 'Address',
+            type: 'string',
+        },
+        {
+            name: 'notes',
+            title: 'Additional Notes',
             type: 'string',
         },
         {
@@ -48,4 +59,5 @@ export default {
         
     ],
 };
+
 
