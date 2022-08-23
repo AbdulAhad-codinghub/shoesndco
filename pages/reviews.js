@@ -4,7 +4,6 @@ import { urlFor, client } from '../lib/client';
 import styles from '../styles/reviews.module.scss';
 import styles1 from '../styles/contact.module.scss';
 import Image from 'next/image';
-import About from './About';
 import { user } from '../assets';
 
 const reviews = () => {
