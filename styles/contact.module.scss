@@ -7,7 +7,6 @@
     @media screen and (max-width: 1000px) {
       margin: auto;
       margin-top: -3rem;
-      
     }
   }
   .head_text{
@@ -71,10 +70,13 @@
   
   .app__footer_cards .app__footer_card:last-child {
     background-color: #f2f7fb;
+    color: #3e290e;
+
   }
   
   .app__footer-cards .app__footer_card:last-child:hover {
     box-shadow: 0 0 25px #f2f7fb;
+
   }
   
   .app__footer_form {
@@ -126,7 +128,7 @@
       padding: 1rem 2rem;
       border-radius: 10px;
       border: none;
-      background-color:#313bac;
+      background-color:rgb(184, 115, 51);
       font-weight: 500;
       color: white;
       outline: none;
@@ -138,7 +140,7 @@
       cursor: pointer;
   
       &:hover {
-        background-color: #2430af;
+        background-color: rgb(128, 70, 27)
       }
       @media screen and (max-width: 1000px) {
         flex-direction: column;
