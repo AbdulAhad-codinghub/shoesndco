@@ -83,7 +83,7 @@ const Cart = () => {
             </div>
             <div className="btn-container">
               <Link href={"/form"}>
-                <button type="button" className="btn"  onClick={() => setShowCart(false)}>
+                <button type="button" className="mybutton"  onClick={() => setShowCart(false)}>
                   Confirm Order
                 </button>
               </Link>
