@@ -7,7 +7,6 @@ import Image from 'next/image';
 import About from './About';
 import { user } from '../assets';
 
-
 const reviews = () => {
   const [myformdata, setmyformdata] = useState({ name: '', city: '', message: '' });
   const [FormSubmitted, setFormSubmitted] = useState(false);
@@ -96,8 +95,9 @@ const reviews = () => {
 
         {testimonials.length && (
           <>
-
+            
             <div className={styles.app__testimonial_item}>
+            
               {testimonials[currentIndex].imgurl && (
                 <img src={urlFor(testimonials[currentIndex].imgurl)} alt={testimonials[currentIndex].name} />
               )}
