@@ -210,6 +210,7 @@ text-align: end;
 .products-heading h2{
   font-size: 40px;
   font-weight: 800;
+  margin-left: 2rem;
 }
 .products-heading p{
   font-size: 16px;
@@ -646,7 +647,10 @@ margin-top: 160px;
 }
 
 @media screen and (max-width:800px) {
-  
+  .products-heading h2{
+    
+    margin-left: 0rem;
+  }
   .hero-banner-container{
     height: 560px;
   }
@@ -705,7 +709,7 @@ margin-top: 160px;
     margin-left: 0.1rem;
   }
  .hero-banner-container h3{
-    margin-top: 13rem;
+    margin-top: 14rem;
     font-size: 40px;
   }
   .hero-banner-container button{

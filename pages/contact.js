@@ -36,7 +36,7 @@ const contact = () => {
 
   return (
     <div className={styles.app__footer}>
-      <div className='products-heading' style={{marginLeft:'2rem'}}>
+      <div className='products-heading' >
         <h2>Drop your Message</h2>
       </div>
       <div className={styles.app__footer_cards}>

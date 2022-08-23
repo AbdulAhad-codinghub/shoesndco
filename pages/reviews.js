@@ -55,7 +55,7 @@ const reviews = () => {
 
       <div className={styles1.app__footer}>
         <div className='products-heading'>
-          <h2 style={{ marginLeft: '3rem' }}>Share your Review</h2>
+          <h2 >Share your Review</h2>
         </div>
 
         {!FormSubmitted ? (
