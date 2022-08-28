@@ -87,7 +87,7 @@ const reviews = () => {
       </div>
 
       <div className='products-heading'>
-        <h2 style={{ marginLeft: '2rem' }}>Our Customer Reviews</h2>
+        <h2>Our Customer Reviews</h2>
         <p > What our customers says </p>
       </div>
       <div className={styles.app__testimonial}>

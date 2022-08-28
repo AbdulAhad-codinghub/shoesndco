@@ -8,8 +8,6 @@ import { urlFor } from "../../lib/client"
 // const myArray=pic.split('/')
 // let image_address = myArray[3];
 
-
-
 export default {
     name:'testimonials',
     title:'Testimonials',

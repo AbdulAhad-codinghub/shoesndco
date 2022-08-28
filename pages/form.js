@@ -11,6 +11,7 @@ import orderDetail from '../sanity_shoesndco/schemas/orderDetail'
 import { Cart } from '../components';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import { TiDeleteOutline } from 'react-icons/ti';
+import toast from 'react-hot-toast';
 
 const form = () => {
     const { cartItems, totalPrice } = useStateContext();
@@ -31,6 +32,7 @@ const form = () => {
     const handleChangeInput = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
+
     };
 
 
@@ -74,8 +76,13 @@ const form = () => {
             })
             .catch((err) => console.log(err));
     };
-
-
+ 
+    const validate=(value)=>{
+        if(value==null || value==""){
+            console.log("hello")
+            toast.success('Please Enter all feilds');
+        }
+    }
     return (
         <>
             <div className='container'>
@@ -131,18 +138,18 @@ const form = () => {
                         <h5 className="mb-0">Delivery details</h5>
                     </div>
                     <div className="card-body">
-                        <form>
+                        <form action='/sucess' name='myform' required>
                             <div className="row mb-4">
                                 <div className="col">
                                     <div className="form-outline">
-                                        <input type="text" id="form7Example1" className="form-control" name="name" value={name} onChange={handleChangeInput} />
-                                        <label className="form-label" for="form7Example1">Full Name</label>
+                                        <input type="text" id="form7Example1" className="form-control" name="name" value={name} onChange={handleChangeInput} required />
+                                        <label className="form-label" htmlFor="form7Example1">Full Name</label>
                                     </div>
                                 </div>
                                 <div className="col">
                                     <div className="form-outline">
-                                        <input type="email" id="form7Example2" className="form-control" name="email" value={email} onChange={handleChangeInput} />
-                                        <label className="form-label" for="form7Example2">Email</label>
+                                        <input type="email" id="form7Example2" className="form-control" name="email" value={email} onChange={handleChangeInput} required />
+                                        <label className="form-label" htmlFor="form7Example2">Email</label>
                                     </div>
                                 </div>
                             </div>
@@ -150,14 +157,14 @@ const form = () => {
                             <div className="row mb-4">
                                 <div className="col">
                                     <div className="form-outline">
-                                        <input type="text" id="form7Example1" className="form-control" name="city" value={city} onChange={handleChangeInput} />
-                                        <label className="form-label" for="form7Example1">City</label>
+                                        <input type="text" id="form7Example1" className="form-control" name="city" value={city} onChange={handleChangeInput} required />
+                                        <label className="form-label" htmlFor="form7Example1">City</label>
                                     </div>
                                 </div>
                                 <div className="col">
                                     <div className="form-outline">
-                                        <input type="text" id="form7Example2" className="form-control" name="zipcode" value={zipcode} onChange={handleChangeInput} />
-                                        <label className="form-label" for="form7Example2">Zipcode</label>
+                                        <input type="text" id="form7Example2" className="form-control" name="zipcode" value={zipcode} onChange={handleChangeInput} required />
+                                        <label className="form-label" htmlFor="form7Example2">Zipcode</label>
                                     </div>
                                 </div>
                             </div>
@@ -165,39 +172,40 @@ const form = () => {
                             <div className="row mb-4">
                                 <div className="col">
                                     <div className="form-outline">
-                                        <input type="text" id="form7Example1" className="form-control" name="phoneno" value={phoneno} onChange={handleChangeInput} />
-                                        <label className="form-label" for="form7Example1">Contact No</label>
+                                        <input type="text" id="form7Example1" className="form-control" name="phoneno" value={phoneno} onChange={handleChangeInput} required />
+                                        <label className="form-label" htmlFor="form7Example1">Contact No</label>
                                     </div>
                                 </div>
                                 <div className="col">
                                     <div className="form-outline">
-                                        <input type="text" id="form7Example2" className="form-control" name="phoneno2" value={phoneno2} onChange={handleChangeInput} />
-                                        <label className="form-label" for="form7Example2">Contact No (Alternate)</label>
+                                        <input type="text" id="form7Example2" className="form-control" name="phoneno2" value={phoneno2} onChange={handleChangeInput} required/>
+                                        <label className="form-label" htmlFor="form7Example2">Contact No (Alternate)</label>
                                     </div>
                                 </div>
                             </div>
                             <div className="form-outline mb-4">
-                                <textarea className="form-control" id="form7Example7" rows="4" value={address} name="address" onChange={handleChangeInput}></textarea>
-                                <label className="form-label" for="form7Example7">Address</label>
+                                <textarea className="form-control" id="form7Example7" rows="4" value={address} name="address" onChange={handleChangeInput} required></textarea>
+                                <label className="form-label" htmlFor="form7Example7">Address</label>
                             </div>
                             <div className="form-outline mb-4">
                                 <textarea className="form-control" id="form7Example7" rows="4" value={notes} name="notes" onChange={handleChangeInput}></textarea>
-                                <label className="form-label" for="form7Example7">Additional information / Notes</label>
+                                <label className="form-label" htmlFor="form7Example7">Additional information / Notes</label>
                             </div>
 
                             <div className="form-check d-flex justify-content-center mb-2">
                                 <input className="form-check-input me-2" type="checkbox" value="" id="form7Example8" unchecked />
-                                <label className="form-check-label" for="form7Example8">
+                                <label className="form-check-label" htmlFor="form7Example8">
                                     I agree with the terms & conditions
                                 </label>
                             </div>
-                        </form>
-                    </div>
-                    <Link href="/sucess">
-                        <button type="button" className={styles.button_send} onClick={handleSubmit} style={{ maxWidth: 'fit-content', margin: 'auto', backgroundColor: 'burlywood' }}>
+                           
+                        <button type="submit" className={styles.button_send} onClick={handleSubmit} style={{ maxWidth: 'fit-content', margin: 'auto', backgroundColor: 'burlywood' }}>
                             Submit
                         </button>
-                    </Link>
+   
+                        </form>
+                    </div>
+                    
                     <br />
                 </div>
 
